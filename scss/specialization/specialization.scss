@@ -1,0 +1,49 @@
+.specialization {
+  &__title {
+    margin-bottom: 100px;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    &__item {
+      color: #FFFFFF;
+      font-family: 'Lato', sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 2.4rem;
+      line-height: 3rem;
+      position: relative;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 30px;
+      width: calc(33.3333333% - 30px);
+      &_img {
+        max-width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+      &_text {
+        display: block;
+        position: absolute;
+        bottom: 45px;
+        left: 45px;
+        z-index: 10;
+      }
+      &__cover {
+        background-color: rgba($color: #005FA3, $alpha: 0.5);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all .4s ease-in-out;
+        opacity: 0;
+      }
+      &:hover .specialization-list__item__cover {
+        opacity: 1;
+      }
+    }
+  }
+}
